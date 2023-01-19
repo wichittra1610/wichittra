@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>wichittra khampeera</h1>
+    <label>กรอกคะแนน(0-100)</label>
+    <input type="text" id="g">
+    <button onclick="checkInput()">ตัดเกรด</button>
+    <p id="demo"></p> 
+</body>
+<script>
+    function checkInput(){
+        var input = document.getElementById("g").value;
+        if(input<0){
+            document.getElementById("demo").innerHTML = "กรุณากรอกข้อมูลให้ถูกต้อง"; 
+        }else if(input<=49){
+            document.getElementById("demo").innerHTML = input +"คะแนน ได้เกรด E"; 
+        }else if(input<=54){
+            document.getElementById("demo").innerHTML = input +"คะแนน ได้เกรด D"; 
+        }else if(input<=59){
+            document.getElementById("demo").innerHTML = input +"คะแนน ได้เกรด D+"; 
+        }else if(input<=64){
+            document.getElementById("demo").innerHTML = input +"คะแนน ได้เกรด C"; 
+        }else if(input<=69){
+            document.getElementById("demo").innerHTML = input +"คะแนน ได้เกรด C+"; 
+        }else if(input<=74){
+            document.getElementById("demo").innerHTML = input +"คะแนน ได้เกรด B"; 
+        }else if(input<=79){
+            document.getElementById("demo").innerHTML = input +"คะแนน ได้เกรด B+"; 
+        }else if(input<=100){
+            document.getElementById("demo").innerHTML = input +"คะแนน ได้เกรด A"; 
+        }else{
+            document.getElementById("demo").innerHTML = "กรุณากรอกข้อมูลให้ถูกต้อง"; 
+        }
+    }
+</script>
+</html>
